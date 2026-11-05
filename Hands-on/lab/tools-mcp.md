@@ -4,11 +4,7 @@ title: "Step3. Tools 및 MCP 등록"
 nav_order: 5
 permalink: /lab/tools-mcp.html
 ---
-
-# Step3. Tools 및 MCP 등록
-
-{: .warning}
-내용 검토용 초안: 실습 자료는 보완 중이므로 다운로드·참조 링크를 제외했습니다. 실습 자료 작업 완료 후 교안과 자료 링크를 수정하여 재배포할 예정입니다. 
+# Step3. Tools 등록 
 
 **학습 목표:** 업무에 필요한 기능과 출처를 기준으로 도구를 선택하고, Learn MCP의 실제 호출 결과를 확인합니다.
 
@@ -36,28 +32,43 @@ permalink: /lab/tools-mcp.html
 
 1. **빌드 → 도구(Tools) 옆 +**를 선택합니다.
     ![도구 추가](../Hands-on_image/6-1_도구연결화면.png)
-    <!-- 이미지 수정 필요 -->
-2. 카탈로그에서 `Microsoft Learn Docs MCP` 또는 Learn 관련 MCP를 검색합니다.
+    
+2. 카탈로그에서 `Microsoft Learn Docs MCP Server` 를 검색하여 선택합니다.
     ![Learn MCP 선택](../Hands-on_image/6-2_도구_LearnMCP서버연결화면.png)
 
-3. 서버 상세에서 연결 추가를 선택하고 연결 이름을 `LearnDocs_HandsOn`처럼 지정합니다.
+3. 서버 상세에서 연결 추가를 선택하고 연결 이름에 아래 이름을 입력합니다. `본인이니셜`은 본인의 이니셜로 바꿔 **만들기(Create)** 및 에이전트 추가를 완료합니다.
+    ```text
+    HandsOn_Connection_본인이니셜
+    ```
+
     ![연결 생성](../Hands-on_image/6-3_MCP서버연결생성화면.png)
     ![연결 만들기](../Hands-on_image/6-4_MCP서버연결생성화면2.png)
-    <!-- 이미지 수정 필요 -->
-4. **만들기(Create)** 및 에이전트 추가를 완료하고 Build의 도구 목록에 표시되는지 확인합니다.  
-    이 에이전트에서 사용하지 않는 **Work IQ**가 연결되어 있다면 에이전트의 도구 목록에서 제거합니다.
-    ![등록 완료](../Hands-on_image/6-5_도구연결확인화면.png)
+    
+4.  이 에이전트에서 사용하지 않는 **Work IQ**가 연결되어 있어 에이전트의 도구 목록에서 제거한 후, 저장합니다.
+    ![Work IQ 도구 제거](../Hands-on_image/6-5-1_WorkIQ도구제거.png)
+    ![등록 완료](../Hands-on_image/6-5-2_도구연결확인화면.png)
 
 ### 4. 도구 호출 확인
 
-Preview에서 아래 요청을 실행해 공식 문서 조회가 실제로 이루어지는지 확인합니다.
+등록한 도구(Microsoft Learn MCP Server)가 잘 동작하는지 확인합니다.
 
-```text
-Microsoft Learn MCP를 사용해 Azure Document Intelligence의 문서 추출 기능과
-대표 샘플 검증·사람의 검수가 필요한 조건을 찾아줘.
-검색 결과가 부족하면 본문을 조회하고 공식 문서 제목·URL·확인 내용을 제시해줘.
-이번에는 제안서와 WBS 파일을 생성하지 마.
-```
+1. 상단 Preview(미리 보기)를 선택합니다. 만든 에이전트를 테스트할 수 있는 공간이 보입니다.
+    ![도구 호출 확인_Preview](../Hands-on_image/6-6_도구연결확인_미리보기.png)
+    
+2. 아래 요청을 프롬프트 입력창에 입력하여 실행합니다.
+    ```text
+    Microsoft Learn MCP를 사용해 Copilot Studio의 GHCP 하네스에 대해 간단하게 설명해줘.
+    ```
+    ![프롬프트 입력 및 테스트](../Hands-on_image/6-6-2_테스트프롬프트입력.png)
+
+3. Microsoft Learn MCP Server 도구를 호출하였는지, 답변에 이상이 있는지 확인합니다.
+    ![테스트 결과 확인](../Hands-on_image/6-6-3_테스트프롬프트확인.png)
+
+    {: .note }
+    > `최종 사용자 미리 보기`는 에이전트의 테스트 화면 표시 방식을 전환하는 기능입니다.  
+     `활성화(ON)` 시 실제 사용자에게 보이는 응답만 표시하고, `비활성화(OFF)` 시 Activity Trace 등 스킬·도구 실행 과정을 확인할 수 있으며, 에이전트의 실제 동작에는 영향을 주지 않습니다.
+    
+    <!--현재는 버그인지, 기술문서 설명 오류인지 모르겠으나 설명과 반대로 동작함 !!! -->
 
 **완료 확인:** 응답의 링크뿐 아니라 Trace에 실제 MCP 검색 호출과 결과가 있습니다. 필요한 근거를 확보했으면 불필요한 반복 검색을 하지 않습니다. 제품 기술은 Learn MCP, 내부 인력·경험은 Knowledge처럼 **업무별 근거에 맞는 도구·지식**을 선택합니다.
 

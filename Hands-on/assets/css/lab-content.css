@@ -1,0 +1,24 @@
+/* Supplementary case studies are visually separate from the main procedure. */
+.main-content .lab-appendix {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-top: 4px solid #9ca3af;
+  border-radius: 10px;
+  background: #f8f9fa;
+}
+
+.main-content .lab-appendix > h3:first-child {
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.main-content .lab-appendix > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 40rem) {
+  .main-content .lab-appendix {
+    padding: 1rem;
+  }
+}

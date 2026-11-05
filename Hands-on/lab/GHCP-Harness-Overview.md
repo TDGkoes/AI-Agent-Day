@@ -88,8 +88,8 @@ Step1부터는 이 흐름을 연결하는 구성 방법을 다룹니다. 산출�
 |---|---|---|
 | 에이전트 지침 | `AGENT_지침.md` | Step1에서 지침 내용을 입력 |
 | 분석 Skill | `rfp-analyzer/SKILL.md` | Step2에서 `.md` 파일 업로드 |
-| 제안서 생성 Skill | `rfp-proposal-generator-copy.zip` | Step2에서 템플릿을 포함한 `.zip` 그대로 업로드 |
-| WBS 생성 Skill | `rfp-wbs-generator-copy.zip` | Step2에서 템플릿을 포함한 `.zip` 그대로 업로드 |
+| 제안서 생성 Skill | `rfp-proposal-generator-TC.zip` | Step2에서 템플릿을 포함한 `.zip` 그대로 업로드 |
+| WBS 생성 Skill | `rfp-wbs-generator-TC.zip` | Step2에서 템플릿을 포함한 `.zip` 그대로 업로드 |
 
 제안서·WBS Skill 패키지에는 업무 수행 지침과 원본 템플릿이 포함되어 있습니다. 아래 파일은 구성 확인용이며 별도로 Skill에 업로드하지 않습니다.
 
