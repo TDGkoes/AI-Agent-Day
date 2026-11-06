@@ -13,6 +13,8 @@ permalink: /lab/agent-instructions.html
 > 실습 자료 : <a href="{{ '/skills-Co/AGENT_지침.md' | relative_url }}" download>
   AGENT_지침
 </a>
+
+
 ### 1. Copilot Studio 홈 화면과 환경 확인
 
 1. [Copilot Studio](https://copilotstudio.microsoft.com/)에 접속하고 에이전트를 만들 권한이 있는 계정으로 로그인합니다. 로그인될 경우, 홈 화면이 표시됩니다.

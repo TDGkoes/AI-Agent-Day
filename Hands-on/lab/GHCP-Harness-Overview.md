@@ -8,9 +8,6 @@ has_toc: false
 
 # GHCP Harness 개요
 
-{: .warning}
-내용 검토용 초안: 실습 자료는 보완 중이므로 다운로드·참조 링크를 제외했습니다. 실습 자료 작업 완료 후 교안과 자료 링크를 수정하여 재배포할 예정입니다. 
-
 {: .note }
 > 명칭 안내: Microsoft는 2026년 10월 28일 GitHub Copilot harness의 명칭을 Microsoft Copilot harness로 변경한다고 발표했습니다. 이 문서에서는 기존 화면과의 일관성을 위해 **GHCP Harness**라는 이름을 유지합니다. 환경에 따라 새 명칭이 보일 수 있습니다. [공식 명칭 변경 안내](https://www.microsoft.com/en-us/copilot/blog/copilot-studio/the-github-copilot-harness-in-copilot-studio-is-now-the-microsoft-copilot-harness/)
 
@@ -80,6 +77,11 @@ Step1부터는 이 흐름을 연결하는 구성 방법을 다룹니다. 산출�
 
 ## 4. 사용할 자료
 
+{: .note}
+> 실습 자료: <a href="{{ '/Hands-On_Lab.zip' | relative_url }}" download>
+  Hands-On_Lab 실습 자료
+</a>
+
 이 에이전트는 **Hands-on Lab용으로 제작된 에이전트 지침과 분석·제안서 생성·WBS 생성 Skill**을 사용합니다. 제안서와 상세 WBS는 Skill에 포함된 표준 템플릿을 복사한 뒤 내용을 작성하도록 구성했습니다.
 
 ### 4.1 지침·Skill 등록 파일
@@ -87,14 +89,15 @@ Step1부터는 이 흐름을 연결하는 구성 방법을 다룹니다. 산출�
 | 용도 | 사용할 파일 | 적용 위치 |
 |---|---|---|
 | 에이전트 지침 | `AGENT_지침.md` | Step1에서 지침 내용을 입력 |
-| 분석 Skill | `rfp-analyzer/SKILL.md` | Step2에서 `.md` 파일 업로드 |
-| 제안서 생성 Skill | `rfp-proposal-generator-TC.zip` | Step2에서 템플릿을 포함한 `.zip` 그대로 업로드 |
-| WBS 생성 Skill | `rfp-wbs-generator-TC.zip` | Step2에서 템플릿을 포함한 `.zip` 그대로 업로드 |
+| 분석 Skill | `rfp-analyzer.zip` | Step2에서 `.md` 파일 업로드 |
+| 제안서 생성 Skill | `rfp-proposal-generator-tc.zip` | Step2에서 템플릿을 포함한 `.zip` 그대로 업로드 |
+| WBS 생성 Skill | `rfp-wbs-generator-tc.zip` | Step2에서 템플릿을 포함한 `.zip` 그대로 업로드 |
 
-제안서·WBS Skill 패키지에는 업무 수행 지침과 원본 템플릿이 포함되어 있습니다. 아래 파일은 구성 확인용이며 별도로 Skill에 업로드하지 않습니다.
+RFP 분석·제안서·WBS Skill 패키지에는 업무 수행 지침과 원본 템플릿이 포함되어 있습니다. 아래 파일은 구성 확인용이며 별도로 Skill에 업로드하지 않습니다.
 
-- **제안서:** 업무 수행 지침, 표준 제안서 양식(`.pptx`)
-- **WBS:** 업무 수행 지침, 표준 WBS 양식(`.xlsx`)
+- **RFP 분석:** 업무 수행 지침(`SKILL.md`)
+- **제안서:** 업무 수행 지침(`SKILL.md`), 표준 제안서 양식(`assets/표준제안서 템플릿_V2.pptx`)
+- **WBS:** 업무 수행 지침(`SKILL.md`), 표준 WBS 양식(`assets/표준 WBS.xlsx`)
 
 ### 4.2 Knowledge에 연결할 자료
 
@@ -110,7 +113,7 @@ Step4에서 공통·업무별로 연결합니다. 인력 추천의 ‘실명’�
 
 | 구분 | 자료 | 사용 목적 |
 |---|---|---|
-| 기본 RFP | RFP-01_물류운영포털.md | Step5에서 분석부터 최종 파일까지의 흐름 확인 |
+| 기본 RFP | `RFP-01_물류운영포털.md` | Step5에서 분석부터 최종 파일까지의 흐름 확인 |
 | 추가 RFP | RFP-02, RFP-03 | 다른 요구사항에서도 역할·근거·완료 기준을 유지하는지 검증 |
 
 
