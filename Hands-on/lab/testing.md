@@ -33,9 +33,10 @@ permalink: /lab/testing.html
 | 순서 | 요청 예시 | 기대 결과 |
 |---|---|---|
 | 분석 | “첨부한 RFP를 분석해줘. 지금은 분석만 해줘.” | 요구사항·청사진·근거 있는 실명 후보·미확정 사항 정리. WBS·제안서 추가 생성 없음 |
-| Draft WBS | “방금 분석한 내용을 바탕으로 Draft WBS를 만들어줘.” | 기존 ID·범위·추천 인력·일정 가정을 유지한 계획 표·인계 데이터. 별도 Excel 생성 없음 |
-| 제안서 | “이 분석과 Draft WBS를 바탕으로 제안서를 만들어줘.” | 같은 청사진·인력·일정을 반영하고 표준 양식을 적용한 PPTX 생성 |
+| 제안서 | “이 분석을 바탕으로 제안서를 만들어줘.” | 같은 청사진·인력·일정을 반영하고 표준 양식을 적용한 PPTX 생성 |
 | 상세 WBS | “제안서 내용을 반영해서 상세 WBS를 Excel 파일로 만들어줘.” | 기존 결과를 재사용해 Task·선후행·완료 기준을 구체화한 표준 양식의 XLSX 생성 |
+
+![RFP 분석 테스트](../Hands-on_image/8-5_에이전트테스트_RFP분석.png)
 
 앞 단계에 문제가 있으면 보완한 뒤 후속 결과를 확인합니다. 생성 중에는 Trace 상태를 확인하고 동일 요청을 중복 실행하지 않습니다.
 
@@ -46,6 +47,8 @@ permalink: /lab/testing.html
 | 입력 부족 | **새 대화**, RFP·분석 없이 “이전에 분석한 자료로 제안서를 만들어줘.” | 읽지 않은 결과를 추측하지 않고 필요한 입력 확인 |
 | 정보 미확정 | **새 대화**, RFP와 가용성 미기재 인력 자료로 후보 추천 요청 | 실명·역량 근거 제시, 가용성은 ‘확인 중’ 유지 |
 | 변경 요청 | **기본 흐름을 마친 대화**에서 “ERP 연계 범위가 바뀌었어. 관련 작업과 제안 내용을 수정해줘.” | 구체적인 변경 내용을 확인하고 관련 결과에 반영, 무관한 값 유지 |
+
+![입력 부족 테스트](../Hands-on_image/8-4_조건변경테스트_실패예시.png)
 
 더 확인하려면 새 대화에서 분석 요청의 표현을 바꾸거나 근거 없는 실적을 채워달라고 요청해 봅니다. 도구 오류는 별도 테스트 환경에서 재현 가능한 실패 사례로 확인합니다.
 
@@ -66,11 +69,15 @@ permalink: /lab/testing.html
 
 결과가 기대와 다르면 다음 순서로 실행 기록을 확인합니다.
 
-1. Preview에서 **‘최종 사용자 미리 보기(End user preview)’를 끄고 작성자 화면으로 전환**합니다.
-2. 문제가 발생한 요청의 Activity Trace를 엽니다. 이전 대화는 **기록(History)**에서 찾습니다.
-3. 관련 실행 항목의 입력·결과·오류를 펼쳐 아래 증거를 대조합니다. [Activity Trace 디버깅](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/authoring-activity-trace)
+1. Preview에서 **‘최종 사용자 미리 보기(End user preview)’를 끄고 작성자 화면으로 전환**하여, 문제가 발생한 요청의 Activity Trace를 엽니다. 이전 대화는 **기록(History)**에서 찾습니다.
 
-<!-- 편집 메모: 실제 분석 요청의 Activity Trace 캡처를 추가하고 Skill 선택·지식 검색·도구 호출 결과 위치를 표시할 예정입니다. -->
+    ![미리 보기 진입](../Hands-on_image/8-3_에이전트ActivityTrace.png)
+<!--현재는 버그인지, 기술문서 설명/번역 오류인지 모르겠으나 설명과 반대로 동작함 !!! -->
+
+2. 관련 실행 항목의 입력·결과·오류를 펼쳐 아래 증거를 대조합니다. [Activity Trace 디버깅](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/authoring-activity-trace)
+
+    ![미리 보기 진입](../Hands-on_image/8-3-1_에이전트ActivityTrace_도구호출.png)
+
 
 | 확인할 실행 항목 | 분석 요청에서 찾을 증거 |
 |---|---|
