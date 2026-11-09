@@ -19,16 +19,17 @@ has_toc: false
 
 주요 특징은 다음과 같습니다.
 
-- **목표 기반의 다단계 작업:** 요청을 처리하기 위한 단계를 구성하고 중간 결과를 후속 작업에 활용합니다.
-- **Skill·도구 활용:** 작업 목적에 맞는 Skill을 적용하고, 지식 검색·MCP 등 필요한 도구를 활용합니다.
-- **파일 기반 업무:** Word·Excel·PowerPoint·PDF 등 업무 파일을 읽고 생성·편집하는 작업을 지원합니다.
-- **실행 결과에 따른 조정:** 도구 응답이나 오류를 확인하고 보완·재시도 등 다음 행동을 조정합니다.
+- **자연어 중심의 에이전트 설계:** Instructions로 목표·범위·행동 원칙을 설명하고, Skill·Tool·Knowledge를 연결해 에이전트를 구성합니다.
+- **추론 기반의 다단계 실행 조정:** 목표를 작업으로 나누고 필요한 도구를 선택하며, 중간 결과·오류·요청 변경에 따라 다음 행동을 조정합니다.
+- **재사용 가능한 Skill 기반 업무 구성:** 전문 작업의 절차와 필요한 자료를 Skill로 제공해, 요청에 맞는 업무 수행에 활용합니다.
+- **내장 코드 실행과 업무 파일 처리:** 내장된 코드 실행 기능을 활용하고, Word·Excel·PowerPoint·PDF 파일의 생성·편집을 포함한 작업을 수행합니다.
+- **격리된 실행 환경과 기업 관리 체계:** 작업을 보안 샌드박스에서 실행하며, Copilot Studio의 보안·거버넌스 체계 안에서 운영합니다.
 
-파일 처리 등 하네스별 기능은 [공식 Harness 안내](https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview)를 참고합니다.
+설계 방식과 내장 실행 기능은 [공식 에이전트 개요](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview), 파일 처리와 실행 환경은 [공식 Harness 안내](https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview)를 참고합니다.
 
 ### Agentic Loop — 하나의 요청을 해석하고 처리·검증하는 과정
 
-![요청 분석부터 검증 후 결과 제공 또는 필요한 단계 보완으로 이어지는 Agentic Loop]({{ '/Hands-on_image/agentic-loop.png' | relative_url }})
+![요청 분석부터 검증 후 결과 제공 또는 필요한 단계 보완으로 이어지는 Agentic Loop](../Hands-on_image/agentic-loop.png)
 
 **“첨부한 RFP를 분석해줘”**라는 요청을 예로 들면 다음과 같습니다.
 
