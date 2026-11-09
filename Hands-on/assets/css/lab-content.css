@@ -49,12 +49,8 @@
 .main-content .lab-copy-details .highlighter-rouge > button {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
+  justify-content: center;
   opacity: 1;
   visibility: visible;
 }
 
-.main-content .lab-copy-details button[aria-label="Copy code to clipboard"]::after {
-  content: "복사";
-  font-size: 0.75rem;
-}
