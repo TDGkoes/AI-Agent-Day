@@ -11,6 +11,8 @@ permalink: /
 
 업무를 Skill로 나누고 필요한 도구·지식을 연결해, 분석 결과에서 제안서와 WBS까지 이어지는 에이전트를 구성합니다. 결과와 실행 근거를 확인하며 개선하는 방법도 함께 알아봅니다.
 
+![프로젝트 산출물 작성 에이전트의 목적: 수작업을 줄여 제안서·WBS 초안을 1시간 내외로 작성하고 검토 후 고객에게 전달]({{ '/Hands-on_image/project-delivery-purpose.png' | relative_url }})
+
 ## 1. 학습 목표와 준비사항
 
 RFP 에이전트를 구성하며 다음 내용을 익힙니다.
@@ -40,6 +42,7 @@ RFP 에이전트를 구성하며 다음 내용을 익힙니다.
 
 RFP에서 요구사항·구축 청사진·추천 인력을 정리하고, 그 결과를 이어받아 제안서와 WBS를 작성하는 에이전트입니다.
 
+![RFP 분석부터 상세 WBS까지의 에이전트 업무 흐름]({{ '/Hands-on_image/project-delivery-purpose.png' | relative_url }})
 ![RFP 분석부터 상세 WBS까지의 에이전트 업무 흐름]({{ '/Hands-on_image/ProjectDeliveryAgent흐름도.png' | relative_url }})
 
 **분석 → Draft WBS → 제안서 → 상세 WBS** 순으로 이전 결과를 재사용합니다. Draft WBS는 별도 Excel 파일 없이 중간 계획 데이터로 전달합니다. 청사진과 인력 후보를 일정·수행계획에 연결하고, 최종적으로 표준 양식을 적용한 제안서 `.pptx`와 WBS `.xlsx`를 생성합니다.
