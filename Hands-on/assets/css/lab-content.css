@@ -22,3 +22,39 @@
     padding: 1rem;
   }
 }
+
+
+/* Keep long copyable instructions readable inside an expanded disclosure. */
+.main-content .lab-copy-details > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.main-content .lab-copy-details[open] > summary {
+  margin-bottom: 0.75rem;
+}
+
+.main-content .lab-copy-details .highlighter-rouge {
+  position: relative;
+}
+
+.main-content .lab-copy-details pre {
+  max-height: 32rem;
+  overflow: auto;
+  padding-top: 3rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.main-content .lab-copy-details .highlighter-rouge > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-content .lab-copy-details button[aria-label="Copy code to clipboard"]::after {
+  content: "복사";
+  font-size: 0.75rem;
+}

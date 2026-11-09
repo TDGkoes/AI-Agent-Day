@@ -4,6 +4,7 @@ theme: just-the-docs
 url: ""
 baseurl: ""
 search_enabled: true
+enable_copy_code_button: true
 
 callouts:
   note:
