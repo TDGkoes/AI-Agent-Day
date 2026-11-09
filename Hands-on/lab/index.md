@@ -21,6 +21,11 @@ RFP 에이전트를 구성하며 다음 내용을 익힙니다.
 
 ### 시작 전 확인
 
+{: .note}
+> 실습 자료: <a href="{{ '/Hands-On_Lab.zip' | relative_url }}" download>
+  Hands-On_Lab 실습 자료
+</a>
+
 | 준비 항목 | 확인할 내용 |
 |---|---|
 | 계정·환경 | Copilot Studio에 로그인하고, 사용할 환경에서 GHCP 에이전트를 생성·편집할 수 있는지 확인 |
