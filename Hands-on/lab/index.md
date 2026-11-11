@@ -40,7 +40,7 @@ RFP 에이전트를 구성하며 다음 내용을 익힙니다.
 
 RFP에서 요구사항·구축 청사진·추천 인력을 정리하고, 그 결과를 이어받아 제안서와 WBS를 작성하는 에이전트입니다.
 
-![프로젝트 산출물 작성 에이전트의 목적: 수작업을 줄여 제안서·WBS 초안을 1시간 내외로 작성하고 검토 후 고객에게 전달]({{ '/Hands-on_image/project-delivery-purpose.png' | relative_url }})
+![프로젝트 산출물 작성 에이전트의 목적: 제안서·WBS 초안 작성 시간을 기존 수작업 3일에서 에이전트 활용 시 약 1시간으로 줄이고 검토·수정·보완 후 고객에게 전달]({{ '/Hands-on_image/project-delivery-purpose.png' | relative_url }})
 
 ![RFP 분석부터 상세 WBS까지의 에이전트 업무 흐름]({{ '/Hands-on_image/ProjectDeliveryAgent흐름도.png' | relative_url }})
 
