@@ -45,7 +45,7 @@ GHCP 에이전트를 생성할 때 사용하는 카드입니다. 하단의 **다
 2. 기존 문구를 선택하고 아래 이름을 입력합니다. `본인이니셜`은 본인의 이니셜로 바꿉니다.
 
     ```text
-    ProjectDelivery_HandsOn_본인이니셜
+    PD_HandsOn_본인이니셜
     ```
 
     예를 들어 이니셜이 `KES`이면 `ProjectDelivery_HandsOn_KES`로 입력합니다. 이후 화면 이미지의 `Project Delivery_Hands-On_Kes`는 예시 이름입니다.  

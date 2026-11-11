@@ -77,7 +77,19 @@ ProjectDelivery-HandsOn/
 
     ![지식 원본으로 SharePoint 선택](../Hands-on_image/7-2_SharePoint지식연결화면.png)
 
-3. `항목 찾아보기` 또는 URL 입력으로 준비한 폴더를 선택합니다. 주소는 실제 SharePoint 폴더에서 확인한 값을 사용합니다.
+3. `항목 찾아보기` 또는 URL 입력으로 준비한 폴더를 선택합니다. Hands-On에서는 아래 URL을 입력합니다.  
+    `PD 공통 — 인력`
+    ```text
+    https://absx44835127.sharepoint.com/:f:/s/CopilotAgentDay/IgB25Uu64btATYT5aI07P08gAYZHAtyHseJeeuw1yatdG38?e=WXC7aH
+    ```
+    `PD 제안 — 참고 사례`
+    ```text
+    https://absx44835127.sharepoint.com/:f:/s/CopilotAgentDay/IgCk2M32oT0xR4lzFN5-oo1BAaJIPYgBhaLD1xt3tSAVx0s?e=tx0VbG
+    ```
+    `PD WBS — 참고 사례`
+    ```text
+    https://absx44835127.sharepoint.com/:f:/s/CopilotAgentDay/IgCT2VMayUBASI3kuJ3ePcW6ASq8QekxnrKGx06YDx-jTSo?e=5cpcES
+    ```
 
     ![SharePoint 폴더 주소 입력 및 선택](../Hands-on_image/7-3_Sharepoint주소입력및추가.png)
 
