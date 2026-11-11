@@ -7,45 +7,115 @@ permalink: /lab/skills.html
 
 # Step2. Skills 구성
 
-**학습 목표:** 업무별 입력·출력·완료 기준을 구분하고, 이전 결과를 이어 쓰도록 세 Skill을 등록합니다.
+**학습 목표:** 분석·제안서·WBS가 맡은 일을 알고, 제공된 세 Skill을 등록합니다.
+
+[바로 실습하기: 3. Skill 등록](#skill-registration)
 
 {: .note}
 > 실습 자료 : <a href="{{ '/skills-Co/rfp-analyzer/rfp-analyzer.zip' | relative_url }}" download>
   rfp-analyzer ( RFP 분석 스킬)
-</a>, 
+</a>,
 <a href="{{ '/skills-Co/rfp-proposal-generator-tc/rfp-proposal-generator-tc.zip' | relative_url }}" download>
   rfp-proposal-generator-tc ( 제안서 작성 스킬)
-</a>, 
+</a>,
 <a href="{{ '/skills-Co/rfp-wbs-generator-tc/rfp-wbs-generator-tc.zip' | relative_url }}" download>
   rfp-wbs-generator-tc ( WBS 작성 스킬)
 </a>
 
-### 1. Skill 개요
+### 1. Skill은 업무별 작업 방법
 
-Skill은 **하나의 업무를 수행하는 방법을 묶은 재사용 단위**입니다. 이 에이전트는 분석·WBS·제안서를 각각 다른 Skill로 구성합니다. [공식 Skill 개요](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/skills-overview)
+Skill은 **특정 업무를 어떻게 처리할지 적어 둔 작업 방법**입니다. 전체 규칙을 정하는 에이전트 지침과 역할을 나눕니다.
 
-### 2. 지침과 Skill의 역할 구분
-
-**지침은 전체 업무의 목표·공통 원칙·실행 순서를, Skill은 특정 작업의 수행 방법을 담당합니다.** 같은 방법을 두 곳에 적으면 변경 시 서로 다른 규칙이 남을 수 있습니다.
-
-| 구분 | 현재 에이전트와 제안서 생성 Skill의 예 |
+| 구분 | Project Delivery 에이전트의 예 |
 |---|---|
-| 에이전트 지침 | 제안서 요청에는 해당 Skill을 사용하고 이전 분석·Draft WBS의 청사진·인력·일정을 유지 |
-| 제안서 생성 Skill | 동봉 PPTX를 복사해 양식을 유지하고 제안에 맞게 슬라이드를 구성한 뒤 내용·서식을 검증 |
+| 지침: 전체 규칙 | 제안서 요청에는 제안서 Skill을 사용하고 분석 내용을 유지 |
+| Skill: 작업 방법 | 템플릿을 복사하고 내용을 채워 PowerPoint 파일 생성 |
 
-### 3. 업무 분리 기준과 현재 에이전트의 구성
+같은 세부 방법을 양쪽에 반복하지 않으면 수정할 때 혼동을 줄일 수 있습니다.
 
-**하나의 명확한 목적과 완료 기준을 하나의 Skill로 묶습니다.** 작은 Task마다 Skill을 만들거나, 여러 산출물의 작성 방법을 한 Skill에 모두 넣지 않습니다.
+### 2. 등록할 세 Skill
 
-| Skill | 맡은 작업 | 분리한 이유 |
+| Skill | 맡은 일 | 만드는 결과 |
 |---|---|---|
-| 분석 Skill | 요구사항·청사진·인력 추천 정리 | 모든 후속 작업이 사용할 기준을 한 번 정하기 위해 |
-| WBS 생성 Skill | 분석 결과를 작업·일정·담당자로 구체화 | 일정·공수 계획의 책임을 분리하기 위해 |
-| 제안서 생성 Skill | 분석·WBS를 고객에게 설명할 제안서로 구성 | 제안 표현을 바꾸면서 범위·일정까지 다시 만들지 않도록 하기 위해 |
+| 분석 | RFP에서 요구사항·구축 계획·추천 인력 정리 | 제안서와 WBS에 사용할 분석 내용 |
+| 제안서 생성 | 분석과 중간 작업 계획으로 제안서 작성 | PowerPoint `.pptx` |
+| WBS 생성 | 작업·담당자·일정 정리 | 중간 계획 데이터 또는 상세 Excel `.xlsx` |
 
-이렇게 나누면 제안서의 구성이나 템플릿을 수정할 때 인력 분석·일정 산정까지 함께 고칠 필요가 줄어듭니다. 각 Skill에는 **해당 작업에 필요한 내용만** 넣고 다른 Skill의 수행 방법을 복사하지 않습니다.
+업무가 달라 세 Skill로 나눴습니다. 예를 들어 **제안서 Skill은 분석 내용을 받아 제안서 파일을 만듭니다.** Skill을 만들 때도 무엇을 받아 무엇을 만들고, 무엇을 확인하면 끝인지 적습니다.
 
-### 4. 각 Skill의 업무 정의
+Project Delivery 에이전트는 앞에서 정리한 구축 계획과 인력을 다음 작업에서도 이어 사용합니다. WBS Skill은 Draft 단계에서는 중간 계획 데이터를, 상세 단계에서는 Excel을 만듭니다. **Draft WBS는 별도 Excel 파일이 아닙니다.**
+
+<a id="skill-registration"></a>
+
+### 3. Skill 등록
+
+등록할 Skill에 따라 업로드 파일 형식이 다릅니다.
+
+| 등록할 Skill | 업로드할 파일 | 포함 내용 |
+|---|---|---|
+| 분석 Skill | 지침 문서(`.md`) | 분석 지침 |
+| 제안서 생성 Skill | 템플릿 포함 패키지(`.zip`) | 지침 + PowerPoint 템플릿 |
+| WBS 생성 Skill | 템플릿 포함 패키지(`.zip`) | 지침 + Excel 템플릿 |
+
+{: .note }
+> `.zip`은 템플릿을 함께 전달하기 위한 **Skill 등록 패키지**입니다.
+SKILL.md파일과 지원자료를 `.zip`으로 압축하여 업로드합니다.
+
+#### 3.1 분석 Skill 등록 — `.md` 파일
+
+1. 제공된 <a href="{{ '/skills-Co/rfp-analyzer/rfp-analyzer.zip' | relative_url }}" download>RFP 분석 Skill(rfp-analyzer.zip)</a>의 압축을 풀어, `SKILL.md`파일이 업로드할 Skill의 지침 문서 입니다.
+    {: .note}
+    > 실습을 위해 `.md`파일을 업로드 하지만, `.zip`파일을 그대로 업로드하여도 무방합니다.
+2. **빌드 → 기술(Skills) 옆 + → 기술 업로드**를 선택합니다.
+    ![기술 업로드 진입](../Hands-on_image/4-1_스킬업로드화면.png)
+3. 파일을 끌어 놓거나 업로드 영역을 클릭해 제공된 분석 Skill의 지침 문서(`.md`)를 선택합니다. **분석 Skill은 별도 동봉 파일 없이 `.md` 파일 하나를 업로드**합니다.
+    ![기술 파일·패키지 업로드](../Hands-on_image/4-2_스킬업로드화면2.png)
+4. 이름·설명이 인식되고 목록에 분석 Skill이 표시되는지 확인합니다.
+    ![기술 파일·패키지 업로드](../Hands-on_image/4-2-1_분석스킬업로드확인.png)
+
+#### 3.2 제안서/WBS Skill 등록 — 템플릿을 포함한 `.zip` 파일
+
+1. **빌드 → 기술(Skills) 옆 + → 기술 업로드**를 다시 선택합니다.
+    ![기술 업로드 진입_2](../Hands-on_image/4-1-1_스킬업로드화면_제안서.png)
+2. 제공된 <a href="{{ '/skills-Co/rfp-proposal-generator-tc/rfp-proposal-generator-tc.zip' | relative_url }}" download>제안서 작성 Skill(rfp-proposal-generator-tc)</a> 패키지를 선택하고, **압축을 풀지 않은 `.zip` 파일 그대로 업로드**합니다. 분석 Skill과 달리 지침 문서만 선택하지 않습니다.
+    ![기술 패키지 업로드](../Hands-on_image/4-2-1_스킬업로드화면2_제안서.png)
+    {: .warning }
+    > `.zip` 파일을 그대로 업로드하지 않고, `.md` 파일만 업로드하면 Skill이 지시하는 동봉 템플릿을 전달할 수 없습니다.
+3. 목록에 제안서 생성 Skill이 표시되는지 확인합니다.
+    ![기술 패키지 등록 확인](../Hands-on_image/4-2-2_제안서스킬업로드확인.png)
+4. 제안서 생성 Skill이 정상적으로 표시된다면, <a href="{{ '/skills-Co/rfp-wbs-generator-tc/rfp-wbs-generator-tc.zip' | relative_url }}" download>WBS 작성 스킬(rfp-wbs-generator-tc)</a>도 동일한 방법으로 스킬을 등록합니다.
+    ![기술 스킬/패키지 전체 등록 확인](../Hands-on_image/4-2-3_WBS스킬업로드확인.png)
+
+각각의 패키지에는 아래와 같은 폴더 구조로 되어있습니다. 실행 시 동봉된 원본 템플릿을 복사해 제안서 양식을 유지합니다.
+
+```text
+제안서 생성 Skill 패키지(.zip)
+├─ 업무 수행 지침(.md)
+└─ assets/표준 제안서 템플릿(.pptx)
+
+WBS 생성 Skill 패키지(.zip)
+├─ 업무 수행 지침(.md)
+└─ assets/표준 WBS 템플릿(.xlsx)
+```
+
+**확인:**  기술 목록의 세 이름이 에이전트 지침의 작업별 Skill 연결과 일치하는지 확인합니다.
+
+
+![등록된 기술 확인](../Hands-on_image/5-1_전체스킬확인화면.png)
+<!-- 스킬 확인 화면 수정 필요 -->
+
+기술 목록에 분석·제안서 생성·WBS 생성 Skill이 등록되어 있는지 확인합니다. 캡처의 표시 이름은 예시이며, 실제 등록된 Skill의 이름·설명과 에이전트 지침의 작업별 연결이 일치하는지 확인합니다. 사용할 템플릿 방식에 맞는 Skill만 등록하면 선택 혼선을 줄일 수 있습니다.
+
+**다음 단계로 넘어가기 전:** 세 Skill의 등록 이름과 지침의 작업별 Skill 연결이 일치하고, 제안서·WBS ZIP에 원본 템플릿이 포함되어 있는지 확인합니다.
+
+### 4. 더 알아보기
+
+아래 내용은 Skill을 직접 작성하거나 문서 양식을 바꿀 때 참고합니다. 제공된 Skill을 등록하는 데 먼저 읽을 필요는 없습니다.
+
+<details markdown="block">
+<summary>참고: Skill 작성 구조와 여러 작업의 결과 연결</summary>
+
+#### Skill에 업무 방법을 적을 때
 
 Skill을 작성할 때는 긴 지시문보다 다음 구조부터 정합니다.
 
@@ -154,81 +224,23 @@ Copilot Studio GHCP 하네스에서 무엇을 왜 제안하며 어떻게 구축�
 원문의 길이보다 이 구조와 책임 구분이 중요합니다.
 
 
-### 5. 여러 Skill의 결과 연결 — 이 에이전트의 사례
+#### Project Delivery 에이전트의 결과 연결
 
-여러 Skill이 이전 작업의 결과를 이어 사용하는 업무에서는 **앞 단계의 출력이 다음 단계의 입력으로 활용되도록** 구성해야 합니다. 이 에이전트는 분석 결과를 WBS와 제안서에서 재사용하므로 단계 간 연결이 필요합니다.
+여러 Skill이 이전 작업의 결과를 이어 사용하는 업무에서는 **앞 단계의 출력이 다음 단계의 입력으로 활용되도록** 구성해야 합니다. Project Delivery 에이전트는 분석 결과를 WBS와 제안서에서 재사용하므로 단계 간 연결이 필요합니다.
 
 ![분석·Draft WBS·제안서·상세 WBS의 결과 연결과 동일 WBS Skill 재사용](../Hands-on_image/skill-workflow.png)
 
 Draft WBS는 주요 작업·일정을 구조화된 중간 계획 데이터로 정리해 제안서에 전달하고, 상세 WBS는 제안서의 결정 사항을 반영해 Task·선후행·공수를 구체화합니다. **같은 WBS Skill이 모드에 따라 입력·작성 수준·출력을 구분하며, 상세 단계에서 표준 양식의 `.xlsx`를 생성합니다.** 분석 결과는 모든 후속 단계에서 함께 사용합니다.
 
-이 에이전트에서 유지할 핵심은 요구사항·구성요소 ID, 청사진, 후보 이름·Level·가용성, 일정과 가정·출처입니다. 상세 인계 형식은 각 Skill에 두고, 에이전트 지침에는 ‘이전 결과를 전달하고 유지한다’는 원칙만 둡니다.
+Project Delivery 에이전트에서 유지할 핵심은 요구사항·구성요소 ID, 청사진, 후보 이름·Level·가용성, 일정과 가정·출처입니다. 상세 인계 형식은 각 Skill에 두고, 에이전트 지침에는 ‘이전 결과를 전달하고 유지한다’는 원칙만 둡니다.
 
 기존 결과를 읽을 수 있으면 위치·버전을 연결하고 변경분을 전달합니다. 읽을 수 없다면 필요한 값을 직접 포함합니다. 파일명만 넘기거나 역할명만 남겨 추천 실명이 사라지지 않도록 합니다.
 
 
-### 6. Skill 등록
+</details>
 
-등록할 Skill에 따라 업로드 파일 형식이 다릅니다.
-
-| 등록할 Skill | 업로드할 파일 | 포함 내용 |
-|---|---|---|
-| 분석 Skill | 지침 문서(`.md`) | 분석 지침 |
-| 제안서 생성 Skill | 템플릿 포함 패키지(`.zip`) | 지침 + PowerPoint 템플릿 |
-| WBS 생성 Skill | 템플릿 포함 패키지(`.zip`) | 지침 + Excel 템플릿 |
-
-{: .note }
-> `.zip`은 템플릿을 함께 전달하기 위한 **Skill 등록 패키지**입니다.  
-SKILL.md파일과 지원자료를 `.zip`으로 압축하여 업로드합니다.
-
-#### 6.1 분석 Skill 등록 — `.md` 파일
-
-1. 제공된 <a href="{{ '/skills-Co/rfp-analyzer/rfp-analyzer.zip' | relative_url }}" download>RFP 분석 Skill(rfp-analyzer.zip)</a>의 압축을 풀어, `SKILL.md`파일이 업로드할 Skill의 지침 문서 입니다.  
-    {: .note}
-    > 실습을 위해 `.md`파일을 업로드 하지만, `.zip`파일을 그대로 업로드하여도 무방합니다.
-2. **빌드 → 기술(Skills) 옆 + → 기술 업로드**를 선택합니다.
-    ![기술 업로드 진입](../Hands-on_image/4-1_스킬업로드화면.png)
-3. 파일을 끌어 놓거나 업로드 영역을 클릭해 제공된 분석 Skill의 지침 문서(`.md`)를 선택합니다. **분석 Skill은 별도 동봉 파일 없이 `.md` 파일 하나를 업로드**합니다.
-    ![기술 파일·패키지 업로드](../Hands-on_image/4-2_스킬업로드화면2.png)
-4. 이름·설명이 인식되고 목록에 분석 Skill이 표시되는지 확인합니다.
-    ![기술 파일·패키지 업로드](../Hands-on_image/4-2-1_분석스킬업로드확인.png)
-
-#### 6.2 제안서/WBS Skill 등록 — 템플릿을 포함한 `.zip` 파일
-
-1. **빌드 → 기술(Skills) 옆 + → 기술 업로드**를 다시 선택합니다.
-    ![기술 업로드 진입_2](../Hands-on_image/4-1-1_스킬업로드화면_제안서.png)
-2. 제공된 <a href="{{ '/skills-Co/rfp-proposal-generator-tc/rfp-proposal-generator-tc.zip' | relative_url }}" download>제안서 작성 Skill(rfp-proposal-generator-tc)</a> 패키지를 선택하고, **압축을 풀지 않은 `.zip` 파일 그대로 업로드**합니다. 분석 Skill과 달리 지침 문서만 선택하지 않습니다.  
-    ![기술 패키지 업로드](../Hands-on_image/4-2-1_스킬업로드화면2_제안서.png)
-    {: .warning }
-    > `.zip` 파일을 그대로 업로드하지 않고, `.md` 파일만 업로드하면 Skill이 지시하는 동봉 템플릿을 전달할 수 없습니다.  
-3. 목록에 제안서 생성 Skill이 표시되는지 확인합니다.
-    ![기술 패키지 등록 확인](../Hands-on_image/4-2-2_제안서스킬업로드확인.png)
-4. 제안서 생성 Skill이 정상적으로 표시된다면, <a href="{{ '/skills-Co/rfp-wbs-generator-tc/rfp-wbs-generator-tc.zip' | relative_url }}" download>WBS 작성 스킬(rfp-wbs-generator-tc)</a>도 동일한 방법으로 스킬을 등록합니다.
-    ![기술 스킬/패키지 전체 등록 확인](../Hands-on_image/4-2-3_WBS스킬업로드확인.png)
-
-각각의 패키지에는 아래와 같은 폴더 구조로 되어있습니다. 실행 시 동봉된 원본 템플릿을 복사해 제안서 양식을 유지합니다.
-
-```text
-제안서 생성 Skill 패키지(.zip)
-├─ 업무 수행 지침(.md)
-└─ assets/표준 제안서 템플릿(.pptx)
-
-WBS 생성 Skill 패키지(.zip)
-├─ 업무 수행 지침(.md)
-└─ assets/표준 WBS 템플릿(.xlsx)
-```
-
-**확인:**  기술 목록의 세 이름이 에이전트 지침의 라우팅과 일치하는지 확인합니다.
-
-
-![등록된 기술 확인](../Hands-on_image/5-1_전체스킬확인화면.png)
-<!-- 스킬 확인 화면 수정 필요 -->
-
-기술 목록에 분석·제안서 생성·WBS 생성 Skill이 등록되어 있는지 확인합니다. 캡처의 표시 이름은 예시이며, 실제 등록된 Skill의 이름·설명과 에이전트 지침의 작업별 연결이 일치하는지 확인합니다. 사용할 템플릿 방식에 맞는 Skill만 등록하면 선택 혼선을 줄일 수 있습니다.
-
-**다음 단계로 넘어가기 전:** 세 Skill의 등록 이름과 지침의 라우팅이 일치하고, 제안서·WBS ZIP에 원본 템플릿이 포함되어 있는지 확인합니다.
-
-<section class="lab-appendix" markdown="block" aria-label="부록: 구축 사례">
+<details class="lab-appendix" markdown="block">
+<summary>참고: 표준 양식 적용 방식과 구축 경험</summary>
 
 ### 부록. 구축 사례 — 표준 양식 적용을 위한 선택
 
@@ -255,7 +267,7 @@ WBS 생성 Skill 패키지(.zip)
 
 제안서는 양식을 유지하면서 슬라이드 수·순서·내용을 조정합니다. 핵심은 **표준 양식을 제대로 적용한 문서와 일관된 결과를 얻는 것**입니다.
 
-</section>
+</details>
 
 ---
 
