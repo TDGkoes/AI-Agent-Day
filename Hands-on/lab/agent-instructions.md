@@ -42,13 +42,13 @@ GHCP 에이전트를 생성할 때 사용하는 카드입니다. 하단의 **다
 
 1. 위 이미지에서 **상단의 빨간 테두리 안에 있는 `제목 없는 에이전트` 입력란**을 클릭합니다.
     ![에이전트 제목 변경](../Hands-on_image/2-2_에이전트생성_제목변경.png)
-2. 기존 문구를 선택하고 아래 이름을 입력합니다. `본인이니셜`은 본인의 이니셜로 바꿉니다.
+2. 기존 문구를 선택하고 아래 이름을 입력합니다.
 
     ```text
-    PD_HandsOn_본인이니셜
+    ProjectDelivery_HandsOn_KES
     ```
 
-    예를 들어 이니셜이 `KES`이면 `ProjectDelivery_HandsOn_KES`로 입력합니다. 이후 화면 이미지의 `Project Delivery_Hands-On_Kes`는 예시 이름입니다.  
+    화면 이미지의 이름과 달라도 `ProjectDelivery_HandsOn_KES`로 입력하면 됩니다.  
     ![에이전트 제목 변경2](../Hands-on_image/2-3_에이전트생성_제목변경2.png)
     
 

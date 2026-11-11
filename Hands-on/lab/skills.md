@@ -197,14 +197,13 @@ SKILL.md파일과 지원자료를 `.zip`으로 압축하여 업로드합니다.
 
 1. **빌드 → 기술(Skills) 옆 + → 기술 업로드**를 다시 선택합니다.
     ![기술 업로드 진입_2](../Hands-on_image/4-1-1_스킬업로드화면_제안서.png)
-2. 제공된 <a href="{{ '/skills-Co/rfp-proposal-generator-tc/rfp-proposal-generator-tc.zip' | relative_url }}" download>제안서 작성 Skill(rfp-proposal-generator-tc)</a>/ 
-<a href="{{ '/skills-Co/rfp-wbs-generator-tc/rfp-wbs-generator-tc.zip' | relative_url }}" download>WBS 작성 스킬(rfp-wbs-generator-tc)</a> 패키지를 선택하고, **압축을 풀지 않은 `.zip` 파일 그대로 업로드**합니다. 분석 Skill과 달리 지침 문서만 선택하지 않습니다.  
+2. 제공된 <a href="{{ '/skills-Co/rfp-proposal-generator-tc/rfp-proposal-generator-tc.zip' | relative_url }}" download>제안서 작성 Skill(rfp-proposal-generator-tc)</a> 패키지를 선택하고, **압축을 풀지 않은 `.zip` 파일 그대로 업로드**합니다. 분석 Skill과 달리 지침 문서만 선택하지 않습니다.  
     ![기술 패키지 업로드](../Hands-on_image/4-2-1_스킬업로드화면2_제안서.png)
     {: .warning }
     > `.zip` 파일을 그대로 업로드하지 않고, `.md` 파일만 업로드하면 Skill이 지시하는 동봉 템플릿을 전달할 수 없습니다.  
 3. 목록에 제안서 생성 Skill이 표시되는지 확인합니다.
     ![기술 패키지 등록 확인](../Hands-on_image/4-2-2_제안서스킬업로드확인.png)
-4. 제안서 생성 Skill이 정상적으로 표시된다면, WBS 작성 Skill도 동일하게 등록합니다.
+4. 제안서 생성 Skill이 정상적으로 표시된다면, <a href="{{ '/skills-Co/rfp-wbs-generator-tc/rfp-wbs-generator-tc.zip' | relative_url }}" download>WBS 작성 스킬(rfp-wbs-generator-tc)</a>도 동일한 방법으로 스킬을 등록합니다.
     ![기술 스킬/패키지 전체 등록 확인](../Hands-on_image/4-2-3_WBS스킬업로드확인.png)
 
 각각의 패키지에는 아래와 같은 폴더 구조로 되어있습니다. 실행 시 동봉된 원본 템플릿을 복사해 제안서 양식을 유지합니다.
