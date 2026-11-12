@@ -15,21 +15,27 @@ has_toc: false
 
 ## 1. GHCP Harness로 할 수 있는 일
 
-하네스는 **AI가 필요한 기능을 사용해 실제 작업을 하도록 돕는 실행 환경**입니다. GHCP 하네스에서는 말로 업무를 설명하고, 작업 방법과 도구·자료를 연결할 수 있습니다.
+하네스는 **AI의 판단을 실제 업무 수행으로 연결하는 실행 환경**입니다. AI 모델이 요청을 이해하고 내용을 만든다면, 하네스는 필요한 작업과 도구를 실행하고 그 결과를 다음 작업으로 이어 줍니다.
 
-| 할 수 있는 일 | Project Delivery 에이전트의 예 |
-|---|---|
-| 여러 작업을 이어 수행 | 요구사항을 분석하고, 그 결과로 제안서와 WBS 작성 |
-| 필요한 기능과 자료 사용 | 인력 자료를 찾고 Microsoft 공식 문서 확인 |
-| 업무 파일 작성 | PowerPoint 제안서와 Excel WBS 생성 |
+![사용자 목표에 맞춰 지침·Skill·Tool·Knowledge를 활용하고 여러 작업과 파일 작성을 지원하는 GHCP Harness 구성](../Hands-on_image/ghcp-harness-overview.png)
 
-필요한 작업과 도구를 선택하고, 결과를 확인하며 작업을 이어갑니다. [공식 하네스 안내](https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview)
+그림의 네 가지 요소를 연결해 업무를 구성합니다. **Instructions는 전체 규칙, Skill은 작업 방법, Tool은 실행 기능, Knowledge는 참고 자료**입니다. 각 요소의 등록 방법은 뒤의 Step에서 직접 확인합니다.
+
+GHCP에서는 자연어로 목표와 원칙을 설명하고, 업무별 Skill을 재사용하며, 내장 코드 실행으로 파일을 읽고 작성·편집할 수 있습니다. 작업은 Copilot Studio의 관리 체계 안에서 격리된 환경으로 실행합니다. [공식 에이전트 개요](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview), [공식 하네스 안내](https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview)
 
 ## 2. Project Delivery 에이전트에서 선택한 이유
 
-Project Delivery 에이전트는 **고객 요구사항을 읽는 일부터 문서 파일을 만드는 일까지** 연결해야 합니다. 여러 Skill과 도구를 사용하기에 GHCP가 적합했고, 실제 구축에서도 PowerPoint·Excel 작성 결과가 만족스러웠습니다.
+Project Delivery 에이전트는 **고객 요구사항을 읽는 일부터 최종 문서 파일 작성까지** 연결해야 합니다. 아래 세 가지를 기준으로 GHCP를 선택했습니다.
 
-Project Delivery 에이전트는 GHCP로 구성합니다. Standard는 비교 대상이며 함께 사용하지 않습니다. 파일 품질에 대한 평가는 실제 구축 경험을 기준으로 합니다.
+| Project Delivery 에이전트에 필요했던 일 | GHCP를 선택한 이유 |
+|---|---|
+| 분석 내용을 중간 작업 계획·제안서·상세 WBS에 이어 사용 | 여러 작업을 연결하고 중간 결과를 다음 작업에서 활용하는 방식에 적합 |
+| 인력 자료와 공식 기술 문서를 확인하며 업무별 방법 적용 | 분석·제안서·WBS Skill과 필요한 도구·지식을 함께 활용 가능 |
+| 고객에게 전달할 PowerPoint·Excel 초안 작성 | 파일 생성·편집을 지원하며, 실제 구축에서 비교한 내용·디자인 품질도 만족스러웠음 |
+
+**선택의 핵심은 질문에 답하는 것에서 끝나지 않고, 자료를 확인해 문서 파일까지 작성하는 업무라는 점입니다.** 파일 품질 평가는 Project Delivery 에이전트의 실제 구축 경험이며, 생성 후에는 사람이 내용을 검토·수정합니다.
+
+Project Delivery 에이전트는 GHCP로 구성합니다. Standard와의 차이는 아래 부록에서 참고할 수 있습니다.
 
 ## 3. 사용할 자료
 
@@ -74,12 +80,12 @@ Step4에서 공통·업무별로 연결합니다. 인력 추천의 ‘실명’�
 
 
 
-<details markdown="block">
-<summary>참고: Standard와 비교하기</summary>
+<details class="lab-appendix" markdown="block">
+<summary>부록. GHCP Harness와 Standard Harness 비교</summary>
 
-### GHCP Harness와 Standard Harness 비교
+### 업무에 맞는 하네스를 고를 때
 
-두 하네스는 업무를 설계하고 실행하는 중심 방식이 다릅니다. **Standard는 미리 정의한 토픽·규칙·경로가 중심이고, GHCP는 목표를 달성하기 위해 여러 단계를 수행하고 결과에 따라 조정하는 작업이 중심**입니다.
+Project Delivery 에이전트는 GHCP로만 구축했습니다. 아래 표는 다른 업무에 맞는 하네스를 고를 때 참고하는 비교입니다. 두 하네스는 업무를 설계하고 실행하는 중심 방식이 다릅니다. **Standard는 미리 정의한 토픽·규칙·경로가 중심이고, GHCP는 목표를 달성하기 위해 여러 단계를 수행하고 결과에 따라 조정하는 작업이 중심**입니다.
 
 | 비교 관점 | Standard Harness | GHCP Harness |
 |---|---|---|
