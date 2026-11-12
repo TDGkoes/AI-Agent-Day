@@ -1,5 +1,5 @@
-title: Microsoft Copilot Harness Agent Lab
-description: Microsoft Copilot Harness 에이전트 구성과 검증을 위한 hands-on lab
+title: GHCP Harness Agent Lab
+description: GHCP 하네스 에이전트 구성과 검증을 위한 hands-on lab
 theme: just-the-docs
 url: ""
 baseurl: ""
@@ -13,7 +13,3 @@ callouts:
   warning:
     title: 주의
     color: yellow
-
-# Instructor-only documents must not enter the published site.
-exclude:
-  - 강의용스크립트_60분.md
