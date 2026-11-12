@@ -26,7 +26,7 @@ permalink: /lab/agent-instructions.html
 
 ### 2. Microsoft Copilot Harness 에이전트 카드 선택
 
-1. 아래 홈 화면 이미지의 중앙 왼쪽에 있는 **에이전트** 카드를 클릭합니다. 캡처에는 이전 명칭인 **GitHub Copilot**이 표시되어 있습니다. 실제 화면에서는 **Microsoft Copilot Harness**에 해당하는 에이전트 카드를 선택합니다.
+1. 아래 홈 화면 이미지의 중앙 왼쪽에 있는 **에이전트** 카드를 클릭합니다.
     ![홈 화면: 홈 화면의 에이전트 카드 선택](../Hands-on_image/1_홈화면.png)
 
 2. 선택 후 아래 이미지처럼 **제목 없는 에이전트**의 편집 화면이 열리는지 확인합니다.
