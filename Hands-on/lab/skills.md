@@ -112,8 +112,8 @@ WBS 생성 Skill 패키지(.zip)
 
 아래 내용은 Skill을 직접 작성하거나 문서 양식을 바꿀 때 참고합니다. 제공된 Skill을 등록하는 데 먼저 읽을 필요는 없습니다.
 
-<details markdown="block">
-<summary>참고: Skill의 일반적인 작성 구조</summary>
+<details class="lab-appendix" markdown="block">
+<summary>부록. Skill의 일반적인 작성 구조</summary>
 
 #### Skill에 업무 방법을 적을 때
 
