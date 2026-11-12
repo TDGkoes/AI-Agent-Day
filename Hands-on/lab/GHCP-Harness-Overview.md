@@ -15,7 +15,7 @@ has_toc: false
 
 ## 1. Microsoft Copilot Harness로 할 수 있는 일
 
-**Microsoft Copilot Harness는 Copilot Studio에서 여러 단계의 업무를 수행하는 에이전트를 만들고 실행하는 환경**입니다. 자연어로 설명한 목표와 규칙을 바탕으로 필요한 Skill·도구·자료를 활용해, 정보 확인부터 문서 파일 작성까지 이어서 처리할 수 있습니다.
+**Microsoft Copilot Harness는 Copilot Studio의 에이전트가 여러 단계의 업무를 수행하도록 돕는 실행 환경입니다.** 에이전트는 자연어로 설명한 목표와 규칙에 따라 필요한 Skill·도구·자료를 활용해, 정보 확인부터 문서 파일 작성까지 처리할 수 있습니다.
 
 ![사용자 목표에 맞춰 지침·Skill·Tool·Knowledge를 활용하고 여러 작업과 파일 작성을 지원하는 Microsoft Copilot Harness 구성](../Hands-on_image/ghcp-harness-overview.png)
 
