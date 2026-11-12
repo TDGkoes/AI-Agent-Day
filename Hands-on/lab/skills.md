@@ -7,7 +7,7 @@ permalink: /lab/skills.html
 
 # Step2. Skills 구성
 
-**학습 목표:** 지침과 Skill의 역할을 구분하고, 업무별로 Skill을 나누는 이유와 지침·지원 자료의 구성 방식을 이해합니다.
+**학습 목표:** 지침과 Skill이 어떻게 다른지 알고, 업무별로 Skill을 나누는 이유와 작업 설명·필요한 자료를 함께 준비하는 방법을 알아봅니다.
 
 [바로 실습하기: 3. Skill 등록](#skill-registration)
 

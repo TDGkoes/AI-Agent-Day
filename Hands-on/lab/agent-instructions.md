@@ -7,7 +7,7 @@ permalink: /lab/agent-instructions.html
 
 # Step1. Microsoft Copilot Harness 에이전트 생성 및 Instructions 작성
 
-**학습 목표:** 지침에 담을 역할·범위·절차·가드레일의 의미를 이해하고, Project Delivery 에이전트에 적용합니다.
+**학습 목표:** 지침에 역할·업무 범위·처리 순서·지켜야 할 제한을 정리하는 방법을 알아보고, Project Delivery 에이전트에 적용합니다.
 
 {: .note}
 > 실습 자료 : <a href="{{ '/skills-Co/AGENT_지침.md' | relative_url }}" download>
