@@ -7,7 +7,7 @@ permalink: /lab/skills.html
 
 # Step2. Skills 구성
 
-**학습 목표:** 분석·제안서·WBS가 맡은 일을 알고, 제공된 세 Skill을 등록합니다.
+**학습 목표:** 지침과 Skill의 역할을 구분하고, 업무별로 Skill을 나누는 이유와 지침·지원 자료의 구성 방식을 이해합니다.
 
 [바로 실습하기: 3. Skill 등록](#skill-registration)
 
