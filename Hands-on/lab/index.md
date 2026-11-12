@@ -76,7 +76,7 @@ Step4에서 공통·업무별로 연결합니다. 인력 추천의 ‘실명’�
 
 Project Delivery 에이전트는 RFP에서 요구사항·구축 계획·추천 인력을 정리하고, 그 내용으로 제안서와 WBS를 작성합니다. 교안에서 ‘구축 청사진’은 시스템을 어떻게 구성할지 정리한 계획을 뜻합니다.
 
-![프로젝트 산출물 작성 에이전트의 목적: 제안서·WBS 초안 작성 소요 시간은 수작업 추정 약 3일, 에이전트 구축 경험 약 1시간이며 검토·수정·보완 후 고객에게 전달]({{ '/Hands-on_image/project-delivery-purpose.png' | relative_url }})
+![프로젝트 산출물 작성 에이전트의 목적: 제안서·WBS 초안 작성 시간을 기존 수작업 3일에서 에이전트 활용 시 약 1시간으로 줄이고 검토·수정·보완 후 고객에게 전달]({{ '/Hands-on_image/project-delivery-purpose.png' | relative_url }})
 
 ![RFP 분석부터 상세 WBS까지의 에이전트 업무 흐름]({{ '/Hands-on_image/ProjectDeliveryAgent흐름도.png' | relative_url }})
 
