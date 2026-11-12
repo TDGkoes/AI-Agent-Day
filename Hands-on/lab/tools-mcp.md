@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Step3. Tools 및 MCP 등록"
+title: "Step3. Tools 등록"
 nav_order: 5
 permalink: /lab/tools-mcp.html
 ---

@@ -53,7 +53,7 @@ Project Delivery 에이전트는 RFP에서 요구사항·구축 계획·추천 �
 | [GHCP Harness 개요]({{ '/lab/GHCP-Harness-Overview.html' | relative_url }}) | 할 수 있는 일·선택 이유·사용 자료 |
 | [Step1. GHCP Harness 에이전트 생성 및 Instructions 작성]({{ '/lab/agent-instructions.html' | relative_url }}) | 에이전트 생성과 전체 목표·범위·공통 원칙 설정 |
 | [Step2. Skills 구성]({{ '/lab/skills.html' | relative_url }}) | 세 Skill의 역할과 등록 방법 |
-| [Step3. Tools 및 MCP 등록]({{ '/lab/tools-mcp.html' | relative_url }}) | 필요한 행동과 출처를 기준으로 Learn MCP 연결 |
+| [Step3. Tools 등록]({{ '/lab/tools-mcp.html' | relative_url }}) | 필요한 행동과 출처를 기준으로 Learn MCP 연결 |
 | [Step4. Knowledge 구성]({{ '/lab/knowledge.html' | relative_url }}) | 인력·참고 자료의 역할과 검색 범위 구성 |
 | [Step5. 테스트 및 Activity Trace]({{ '/lab/testing.html' | relative_url }}) | 두 요청 직접 테스트·최종 파일과 실행 기록 시연 |
 | [정리 및 마무리]({{ '/lab/wrap-up.html' | relative_url }}) | 설계·검증 기준을 정리하고 자신의 업무에 적용 |
