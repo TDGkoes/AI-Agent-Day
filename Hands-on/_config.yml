@@ -13,3 +13,7 @@ callouts:
   warning:
     title: 주의
     color: yellow
+
+# Instructor-only documents must not enter the published site.
+exclude:
+  - 강의용스크립트_60분.md
