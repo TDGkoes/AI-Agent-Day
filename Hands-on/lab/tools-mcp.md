@@ -64,7 +64,7 @@ Project Delivery 에이전트는 Microsoft 기술을 제안할 때 **실제로 �
 
 2. 아래 요청을 프롬프트 입력창에 입력하여 실행합니다.
     ```text
-    Microsoft Learn MCP를 사용해 Copilot Studio의 GHCP 하네스에 대해 간단하게 설명해줘.
+    Microsoft Learn MCP를 사용해 Copilot Studio의 Microsoft Copilot Harness에 대해 간단하게 설명해줘.
     ```
     ![프롬프트 입력 및 테스트](../Hands-on_image/6-6-2_테스트프롬프트입력.png)
 

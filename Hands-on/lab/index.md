@@ -5,7 +5,7 @@ nav_order: 1
 permalink: /
 ---
 
-# Microsoft Copilot Studio GHCP Harness Hands-on Lab
+# Microsoft Copilot Studio Microsoft Copilot Harness Hands-on Lab
 
 **RFP 분석 및 제안서·WBS 생성 에이전트 구축**
 
@@ -28,7 +28,7 @@ Project Delivery 에이전트를 구성하며 다음 내용을 익힙니다.
 
 | 준비 항목 | 확인할 내용 |
 |---|---|
-| 계정·환경 | Copilot Studio에 로그인하고, 사용할 환경에서 GHCP 에이전트를 생성·편집할 수 있는지 확인 |
+| 계정·환경 | Copilot Studio에 로그인하고, 사용할 환경에서 Microsoft Copilot Harness 에이전트를 생성·편집할 수 있는지 확인 |
 | 연결 기능 | 해당 환경에서 Skill 업로드, MCP 도구 연결, Knowledge 추가를 사용할 수 있는지 확인 |
 | 지식 저장소 | Step4에서 연결할 교육용 SharePoint 폴더에 접근할 수 있는지 확인. 폴더와 자료는 미리 준비되어 있음 |
 | 제공 자료 | 아래 ‘사용할 자료’에서 지침·Skill 등록 파일·지식 샘플·테스트 RFP 확인 |
@@ -86,8 +86,8 @@ Project Delivery 에이전트는 RFP에서 요구사항·구축 계획·추천 �
 
 | 페이지 | 확인할 내용 |
 |---|---|
-| [GHCP Harness 개요]({{ '/lab/GHCP-Harness-Overview.html' | relative_url }}) | 할 수 있는 일·선택 이유 |
-| [Step1. GHCP Harness 에이전트 생성 및 Instructions 작성]({{ '/lab/agent-instructions.html' | relative_url }}) | 에이전트 생성과 전체 목표·범위·공통 원칙 설정 |
+| [Microsoft Copilot Harness 개요]({{ '/lab/GHCP-Harness-Overview.html' | relative_url }}) | 할 수 있는 일·선택 이유 |
+| [Step1. Microsoft Copilot Harness 에이전트 생성 및 Instructions 작성]({{ '/lab/agent-instructions.html' | relative_url }}) | 에이전트 생성과 전체 목표·범위·공통 원칙 설정 |
 | [Step2. Skills 구성]({{ '/lab/skills.html' | relative_url }}) | 세 Skill의 역할과 등록 방법 |
 | [Step3. Tools 등록]({{ '/lab/tools-mcp.html' | relative_url }}) | 필요한 행동과 출처를 기준으로 Learn MCP 연결 |
 | [Step4. Knowledge 구성]({{ '/lab/knowledge.html' | relative_url }}) | 인력·참고 자료의 역할과 검색 범위 구성 |

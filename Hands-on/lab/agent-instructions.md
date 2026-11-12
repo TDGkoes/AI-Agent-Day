@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "Step1. GHCP Harness 에이전트 생성 및 Instructions 작성"
+title: "Step1. Microsoft Copilot Harness 에이전트 생성 및 Instructions 작성"
 nav_order: 3
 permalink: /lab/agent-instructions.html
 ---
 
-# Step1. GHCP Harness 에이전트 생성 및 Instructions 작성
+# Step1. Microsoft Copilot Harness 에이전트 생성 및 Instructions 작성
 
-**학습 목표:** GHCP 에이전트를 생성하고 이름·역할·업무 범위·공통 규칙을 입력한 뒤 저장합니다.
+**학습 목표:** Microsoft Copilot Harness 에이전트를 생성하고 이름·역할·업무 범위·공통 규칙을 입력한 뒤 저장합니다.
 
 {: .note}
 > 실습 자료 : <a href="{{ '/skills-Co/AGENT_지침.md' | relative_url }}" download>
@@ -24,15 +24,15 @@ permalink: /lab/agent-instructions.html
 
 **확인:** 선택한 환경의 홈 화면과 중앙의 에이전트 카드가 보입니다.
 
-### 2. GitHub Copilot 표시가 있는 에이전트 카드 선택
+### 2. Microsoft Copilot Harness 에이전트 카드 선택
 
-1. 아래 홈 화면 이미지의 중앙 왼쪽에 있는 **에이전트** 카드를 클릭합니다. 카드 이름 옆에 **GitHub Copilot** 표시가 있습니다.
+1. 아래 홈 화면 이미지의 중앙 왼쪽에 있는 **에이전트** 카드를 클릭합니다. 캡처에는 이전 명칭인 **GitHub Copilot**이 표시되어 있습니다. 실제 화면에서는 **Microsoft Copilot Harness**에 해당하는 에이전트 카드를 선택합니다.
     ![홈 화면: 홈 화면의 에이전트 카드 선택](../Hands-on_image/1_홈화면.png)
 
 2. 선택 후 아래 이미지처럼 **제목 없는 에이전트**의 편집 화면이 열리는지 확인합니다.
     ![생성 화면: 생성 직후의 화면과 에이전트 이름 입력 위치](../Hands-on_image/2_에이전트_생성화면.png)
 
-GHCP 에이전트를 생성할 때 사용하는 카드입니다. 하단의 **다른 빌드 방법**과 구분해 선택합니다. 명칭 변경이 반영된 환경에서는 카드에 Microsoft Copilot 관련 이름이 표시될 수 있습니다.
+Microsoft Copilot Harness 에이전트를 생성할 때 사용하는 카드입니다. 하단의 **다른 빌드 방법**과 구분해 선택합니다. 캡처와 실제 화면의 명칭이 다를 수 있으므로 Microsoft Copilot Harness에 해당하는 카드를 확인합니다.
 
 
 ### 3. 에이전트 이름 및 지침 입력
@@ -127,7 +127,7 @@ GHCP 에이전트를 생성할 때 사용하는 카드입니다. 하단의 **다
     
 **Step1 완료 체크**
 
-- [ ] 선택한 환경에서 GHCP 에이전트를 생성하고 이름을 지정했습니다.
+- [ ] 선택한 환경에서 Microsoft Copilot Harness 에이전트를 생성하고 이름을 지정했습니다.
 - [ ] 중앙 안내 영역에 역할·목표·업무 범위·공통 원칙을 입력했습니다.
 - [ ] 분석·WBS 생성·제안서 생성 Skill의 선택 조건과 실행 순서를 확인했습니다.
 - [ ] 이름과 지침을 저장하고 Skills를 추가할 준비를 마쳤습니다.
