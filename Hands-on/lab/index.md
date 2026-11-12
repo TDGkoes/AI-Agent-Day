@@ -30,11 +30,47 @@ Project Delivery 에이전트를 구성하며 다음 내용을 익힙니다.
 |---|---|
 | 계정·환경 | Copilot Studio에 로그인하고, 사용할 환경에서 GHCP 에이전트를 생성·편집할 수 있는지 확인 |
 | 연결 기능 | 해당 환경에서 Skill 업로드, MCP 도구 연결, Knowledge 추가를 사용할 수 있는지 확인 |
-| 지식 저장소 | Step4의 SharePoint 방식에 사용할 폴더와 접근 권한 준비. 파일 추가 방식은 해당 환경의 지원 여부 확인 |
-| 제공 자료 | GHCP Harness 개요 페이지의 ‘사용할 자료’에서 지침·Skill 등록 파일·지식 샘플·테스트 RFP 확인 |
+| 지식 저장소 | Step4에서 연결할 교육용 SharePoint 폴더에 접근할 수 있는지 확인. 폴더와 자료는 미리 준비되어 있음 |
+| 제공 자료 | 아래 ‘사용할 자료’에서 지침·Skill 등록 파일·지식 샘플·테스트 RFP 확인 |
 | 결과 확인 | 생성된 `.pptx`·`.xlsx`를 열어 내용과 서식을 확인할 수 있는 프로그램 준비 |
 
 구체적인 화면 조작과 연결 방법은 각 Step에서 확인합니다.
+
+<a id="lab-materials"></a>
+
+### 사용할 자료
+
+일괄 다운로드에는 지침·Skill·지식 샘플·테스트 RFP가 들어 있습니다. 등록할 파일은 준비하고, 지식 자료는 교육용 SharePoint 폴더를 연결합니다.
+
+Project Delivery 에이전트는 **Hands-on Lab용으로 제작된 에이전트 지침과 분석·제안서 생성·WBS 생성 Skill**을 사용합니다. 제안서와 상세 WBS는 Skill에 포함된 표준 템플릿을 복사한 뒤 내용을 작성하도록 구성했습니다.
+
+#### 지침·Skill 등록 파일
+
+| 용도 | 사용할 파일 | 적용 위치 |
+|---|---|---|
+| 에이전트 지침 | `AGENT_지침.md` | Step1에서 지침 내용을 입력 |
+| 분석 Skill | `rfp-analyzer.zip` | Step2에서 `.md` 파일 업로드 |
+| 제안서 생성 Skill | `rfp-proposal-generator-tc.zip` | Step2에서 템플릿을 포함한 `.zip` 그대로 업로드 |
+| WBS 생성 Skill | `rfp-wbs-generator-tc.zip` | Step2에서 템플릿을 포함한 `.zip` 그대로 업로드 |
+
+제안서·WBS의 표준 템플릿은 Skill ZIP에 포함되어 있습니다. 패키지의 세부 구성과 업로드 방법은 Step2에서 확인합니다.
+
+#### Knowledge에 연결할 자료
+
+| 분류 | 자료 | 사용 목적 |
+|---|---|---|
+| 공통 인력 | `기술본부인력관리표.xlsx` | 역할·Level·기술 역량에 맞는 후보 추천 |
+| 제안 참고 | `한빛푸드_IT_인프라_효율화_사업_제안서.pptx`, `노바시온테크그룹_제안서.pptx` | 논리 전개·내용 구성 참고. 표준 템플릿과 구분 |
+| WBS 참고 | `WBS_한빛푸드_IT인프라효율화.xlsx`, `WBS_누리제약_M365협업전환.xlsx` | 작업 분해 참고. 과거 일정·인력·공수를 새 사업에 그대로 적용하지 않음 |
+
+Step4에서 공통·업무별로 연결합니다. 인력 추천의 ‘실명’은 **자료에 실제로 기재된 후보 이름**을 뜻합니다. 이름·경력·가용성을 임의로 만들지 않으며, 운영 자료도 업무 적합성 정보만 사용합니다.
+
+#### 테스트 입력
+
+| 구분 | 자료 | 사용 목적 |
+|---|---|---|
+| 기본 RFP | `RFP-01_물류운영포털.md` | Step5에서 분석 테스트와 제안서·WBS 시연에 사용 |
+| 추가 RFP | RFP-02, RFP-03 | 교육 후 다른 요구사항으로 추가 테스트 |
 
 ## 2. 완성할 에이전트와 업무 흐름
 
@@ -50,7 +86,7 @@ Project Delivery 에이전트는 RFP에서 요구사항·구축 계획·추천 �
 
 | 페이지 | 확인할 내용 |
 |---|---|
-| [GHCP Harness 개요]({{ '/lab/GHCP-Harness-Overview.html' | relative_url }}) | 할 수 있는 일·선택 이유·사용 자료 |
+| [GHCP Harness 개요]({{ '/lab/GHCP-Harness-Overview.html' | relative_url }}) | 할 수 있는 일·선택 이유 |
 | [Step1. GHCP Harness 에이전트 생성 및 Instructions 작성]({{ '/lab/agent-instructions.html' | relative_url }}) | 에이전트 생성과 전체 목표·범위·공통 원칙 설정 |
 | [Step2. Skills 구성]({{ '/lab/skills.html' | relative_url }}) | 세 Skill의 역할과 등록 방법 |
 | [Step3. Tools 등록]({{ '/lab/tools-mcp.html' | relative_url }}) | 필요한 행동과 출처를 기준으로 Learn MCP 연결 |

@@ -37,48 +37,7 @@ Project Delivery 에이전트는 **고객 요구사항을 읽는 일부터 최�
 
 Project Delivery 에이전트는 GHCP로 구성합니다. Standard와의 차이는 아래 부록에서 참고할 수 있습니다.
 
-## 3. 사용할 자료
-
-{: .note}
-> 실습 자료: <a href="{{ '/Hands-On_Lab.zip' | relative_url }}" download>
-  Hands-On_Lab 실습 자료
-</a>
-
-Project Delivery 에이전트는 **Hands-on Lab용으로 제작된 에이전트 지침과 분석·제안서 생성·WBS 생성 Skill**을 사용합니다. 제안서와 상세 WBS는 Skill에 포함된 표준 템플릿을 복사한 뒤 내용을 작성하도록 구성했습니다.
-
-### 3.1 지침·Skill 등록 파일
-
-| 용도 | 사용할 파일 | 적용 위치 |
-|---|---|---|
-| 에이전트 지침 | `AGENT_지침.md` | Step1에서 지침 내용을 입력 |
-| 분석 Skill | `rfp-analyzer.zip` | Step2에서 `.md` 파일 업로드 |
-| 제안서 생성 Skill | `rfp-proposal-generator-tc.zip` | Step2에서 템플릿을 포함한 `.zip` 그대로 업로드 |
-| WBS 생성 Skill | `rfp-wbs-generator-tc.zip` | Step2에서 템플릿을 포함한 `.zip` 그대로 업로드 |
-
-분석 Skill에는 업무 방법이, 제안서·WBS Skill에는 업무 방법과 원본 템플릿이 들어 있습니다. 아래 파일은 구성 확인용이며 별도로 Skill에 업로드하지 않습니다.
-
-- **RFP 분석:** 업무 수행 지침(`SKILL.md`)
-- **제안서:** 업무 수행 지침(`SKILL.md`), 표준 제안서 양식(`assets/표준제안서 템플릿_V2.pptx`)
-- **WBS:** 업무 수행 지침(`SKILL.md`), 표준 WBS 양식(`assets/표준 WBS.xlsx`)
-
-### 3.2 Knowledge에 연결할 자료
-
-| 분류 | 자료 | 사용 목적 |
-|---|---|---|
-| 공통 인력 | `기술본부인력관리표.xlsx` | 역할·Level·기술 역량에 맞는 후보 추천 |
-| 제안 참고 | `한빛푸드_IT_인프라_효율화_사업_제안서.pptx`, `노바시온테크그룹_제안서.pptx` | 논리 전개·내용 구성 참고. 표준 템플릿과 구분 |
-| WBS 참고 | `WBS_한빛푸드_IT인프라효율화.xlsx`, `WBS_누리제약_M365협업전환.xlsx` | 작업 분해 참고. 과거 일정·인력·공수를 새 사업에 그대로 적용하지 않음 |
-
-Step4에서 공통·업무별로 연결합니다. 인력 추천의 ‘실명’은 **자료에 실제로 기재된 후보 이름**을 뜻합니다. 이름·경력·가용성을 임의로 만들지 않으며, 운영 자료도 업무 적합성 정보만 사용합니다.
-
-### 3.3 테스트 입력
-
-| 구분 | 자료 | 사용 목적 |
-|---|---|---|
-| 기본 RFP | `RFP-01_물류운영포털.md` | Step5에서 분석부터 최종 파일까지의 흐름 확인 |
-| 추가 RFP | RFP-02, RFP-03 | 다른 요구사항에서도 역할·근거·완료 기준을 유지하는지 검증 |
-
-
+실습에 사용할 파일과 자료의 용도는 [홈의 ‘사용할 자료’]({{ '/' | relative_url }}#lab-materials)에서 확인합니다.
 
 <details class="lab-appendix" markdown="block">
 <summary>부록. GHCP Harness와 Standard Harness 비교</summary>
