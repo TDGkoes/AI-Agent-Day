@@ -76,8 +76,8 @@ Draft WBS는 제안서에 사용할 중간 계획 데이터입니다. 상세 단
 
 결과가 이상하면 **기대한 결과 → 실제 응답 → 실행 기록** 순서로 비교합니다. 예를 들어 인력 이름이 없다면 자료를 찾지 못했는지, 찾았지만 결과에 쓰지 않았는지 확인합니다. 수정한 뒤에는 같은 요청으로 다시 확인합니다.
 
-<details markdown="block">
-<summary>참고: 결과를 더 자세히 점검하고 문제를 수정하려면</summary>
+<details class="lab-appendix" markdown="block">
+<summary>부록. 결과 점검과 문제 수정</summary>
 
 #### 답변과 파일을 더 자세히 확인하기
 

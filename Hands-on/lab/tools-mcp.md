@@ -83,8 +83,8 @@ Project Delivery 에이전트는 Microsoft 기술을 제안할 때 **실제로 �
 
 **다음 단계로 넘어가기 전:** 도구가 목록에 있는지만 보지 말고, 실제 호출과 반환된 공식 문서 내용·URL까지 확인합니다.
 
-<details markdown="block">
-<summary>참고: 도구 선택 기준 자세히 보기</summary>
+<details class="lab-appendix" markdown="block">
+<summary>부록. 도구 선택 기준 자세히 보기</summary>
 
 #### 도구를 직접 선택할 때
 

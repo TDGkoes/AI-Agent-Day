@@ -123,8 +123,8 @@ SharePoint 원본을 변경했다고 즉시 검색 결과가 갱신되었다고 
 
 **다음 단계로 넘어가기 전:** 세 지식 연결의 범위·용도와 위 조회 결과를 대조합니다. 이름만 검색되고 역량 정보가 부족하면 원문·관련 행을 추가 조회합니다.
 
-<details markdown="block">
-<summary>참고: 업무에 맞는 자료를 직접 고를 때</summary>
+<details class="lab-appendix" markdown="block">
+<summary>부록. 업무에 맞는 자료를 직접 고를 때</summary>
 
 #### 자료 선택 기준
 
