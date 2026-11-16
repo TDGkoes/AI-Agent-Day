@@ -77,7 +77,7 @@ SKILL.md파일과 지원자료를 `.zip`으로 압축하여 업로드합니다.
 
 1. **빌드 → 기술(Skills) 옆 + → 기술 업로드**를 다시 선택합니다.
     ![기술 업로드 진입_2](../Hands-on_image/4-1-1_스킬업로드화면_제안서.png)
-2. 제공된 <a href="{{ '/skills-Co/rfp-proposal-generator-tc/rfp-proposal-generator-tc.zip' | relative_url }}" download>제안서 작성 Skill(rfp-proposal-generator-tc)</a> 패키지를 선택하고, **압축을 풀지 않은 `.zip` 파일 그대로 업로드**합니다. 분석 Skill과 달리 지침 문서만 선택하지 않습니다.
+2. 제공된 <a href="{{ '/skills-Co/rfp-proposal-generator-tc/rfp-proposal-generator-tc.zip' | relative_url }}" download>제안서 작성 Skill(rfp-proposal-generator-tc)</a> 패키지를 선택하고, **압축을 풀지 않은 `.zip` 파일 그대로 업로드**합니다. 분석 Skill처럼 SKILL.md 문서만 업로드하지 않고 .zip파일을 업로드합니다.
     ![기술 패키지 업로드](../Hands-on_image/4-2-1_스킬업로드화면2_제안서.png)
     {: .warning }
     > `.zip` 파일을 그대로 업로드하지 않고, `.md` 파일만 업로드하면 Skill이 지시하는 동봉 템플릿을 전달할 수 없습니다.
